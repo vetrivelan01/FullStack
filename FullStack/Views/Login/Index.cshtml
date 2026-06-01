@@ -1,0 +1,54 @@
+@model LoginDetails
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="auth-glass fade-in">
+                <div class="auth-header">
+                    <i class="bi bi-shield-lock-fill fs-2 d-block mb-2"></i>
+                    <h4>Welcome Back</h4>
+                    <p class="mb-0 small opacity-75">Sign in to Citizen Record System</p>
+                </div>
+                <div class="p-4 p-md-5">
+                    <form asp-action="Index">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3 small"></div>
+                        <div class="mb-4">
+                            <label asp-for="LoginID" class="form-label fw-600 smaller text-uppercase">Login ID</label>
+                            <div class="input-group">
+                                <span class="input-group-text border-end-0"><i class="bi bi-person text-muted"></i></span>
+                                <input asp-for="LoginID" class="form-control border-start-0 ps-0 shadow-none" required placeholder="Enter your login ID" />
+                            </div>
+                            <span asp-validation-for="LoginID" class="text-danger smaller"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label asp-for="Password" class="form-label fw-600 smaller text-uppercase">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                                <input asp-for="Password" class="form-control border-start-0 ps-0 shadow-none" type="password" required placeholder="Enter password" />
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger smaller"></span>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg py-3 fw-700 shadow-glow">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
+                            </button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.06);">
+                        <p class="text-muted small mb-2">Don't have an account?</p>
+                        <a asp-action="Register" class="btn btn-outline-primary px-4">Create Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

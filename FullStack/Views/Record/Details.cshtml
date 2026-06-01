@@ -1,0 +1,190 @@
+@model CitizenRecord
+@{
+    ViewData["Title"] = "Record Audit";
+}
+
+<div class="fade-in">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                    <li class="breadcrumb-item"><a asp-action="Index" class="text-decoration-none">Audit Records</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">#@Model.RecordID</li>
+                </ol>
+            </nav>
+            <h1 class="h3 fw-800 mb-0"><i class="bi bi-clipboard-data text-gradient me-2"></i> Audit <span
+                    class="text-gradient">Insight</span></h1>
+        </div>
+        <div class="d-flex gap-2">
+            <a asp-action="Index" class="btn btn-light shadow-sm"><i class="bi bi-arrow-left me-2"></i>Back to
+                Records</a>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Audit Summary Card -->
+        <div class="col-lg-4">
+            <div class="glass-card h-100 animate-on-scroll">
+                <div class="card-body p-4 text-center">
+                    <div class="round-icon-lg bg-indigo bg-opacity-10 text-indigo mx-auto mb-4">
+                        <i class="bi bi-hdd-network-fill"></i>
+                    </div>
+                    <h4 class="fw-800 mb-1">Audit Entry #@Model.RecordID</h4>
+                    <p class="text-muted small mb-4">System Transaction Log</p>
+
+                    <div
+                        class="badge bg-@(Model.RecordStatus.Contains("Active") ? "success" : "warning") bg-opacity-10 text-@(Model.RecordStatus.Contains("Active") ? "success" : "warning") px-4 py-2 rounded-pill fw-800 mb-4 ls-1">
+                        @Model.RecordStatus.ToUpper()
+                    </div>
+
+                    <div class="text-start mt-4 pt-4 border-top">
+                        <div class="p-3 bg-light bg-opacity-50 rounded-4">
+                            <h6 class="text-muted smaller fw-800 text-uppercase ls-1 mb-3">Timestamp</h6>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-calendar text-primary"></i>
+                                <span class="fw-700">@Model.RecordDate.ToString("MMM dd, yyyy")</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-clock text-primary"></i>
+                                <span class="fw-700">@Model.RecordDate.ToString("HH:mm:ss")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linked Entities Card -->
+        <div class="col-lg-8">
+            <div class="glass-card h-100 animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="card-header border-0 bg-transparent p-4 pb-0">
+                    <h5 class="fw-800 mb-0"><i class="bi bi-link-45deg text-primary me-2"></i> Relational Mapping</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <!-- Citizen -->
+                        <div class="col-md-6">
+                            <div
+                                class="p-3 border rounded-4 bg-white h-100 shadow-sm border-0 border-start border-4 border-indigo">
+                                <h6 class="text-muted smaller fw-800 text-uppercase ls-1 mb-3">Authenticated Citizen
+                                </h6>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="avatar bg-indigo text-white fw-800 rounded-pill d-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;">
+                                        @(Model.Citizen?.CitizenName?.Substring(0, 1) ?? "C")
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <div class="fw-800 text-dark text-truncate">@(Model.Citizen?.CitizenName ??
+                                            "System")</div>
+                                        <div class="text-muted smaller">ID: #@Model.CitizenID</div>
+                                    </div>
+                                </div>
+                                <a asp-controller="Citizen" asp-action="Details" asp-route-id="@Model.CitizenID"
+                                    class="btn btn-sm btn-link text-decoration-none fw-700 p-0 mt-3 align-self-end">View
+                                    Profile <i class="bi bi-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-md-6">
+                            <div
+                                class="p-3 border rounded-4 bg-white h-100 shadow-sm border-0 border-start border-4 border-primary">
+                                <h6 class="text-muted smaller fw-800 text-uppercase ls-1 mb-3">Mapped Location</h6>
+                                @if (Model.Address != null)
+                                {
+                                    <div class="fw-800 text-dark">@Model.Address.HouseNumber, @Model.Address.StreetName
+                                    </div>
+                                    <div class="text-muted smaller">@Model.Address.City, @Model.Address.PostalCode</div>
+                                    <a asp-controller="Address" asp-action="Details" asp-route-id="@Model.AddressID"
+                                        class="btn btn-sm btn-link text-decoration-none fw-700 p-0 mt-3">View Location <i
+                                            class="bi bi-chevron-right"></i></a>
+                                }
+                                else
+                                {
+                                    <p class="text-muted italic small mb-0">No address context mapped.</p>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Document -->
+                        <div class="col-12">
+                            <div
+                                class="p-4 border rounded-4 bg-light bg-opacity-50 border-0 border-start border-4 border-success">
+                                <h6 class="text-muted smaller fw-800 text-uppercase ls-1 mb-3">Linked Credentials</h6>
+                                @if (Model.Document != null)
+                                {
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="fw-800 text-dark fs-5">@Model.Document.DocumentType</div>
+                                            <div class="text-muted">Doc ID: <span
+                                                    class="fw-700">@Model.Document.DocumentNumber</span></div>
+                                        </div>
+                                        <a asp-controller="Document" asp-action="Details" asp-route-id="@Model.DocumentID"
+                                            class="btn btn-outline-success btn-sm fw-800 px-4 rounded-pill">
+                                            Insight <i class="bi bi-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <p class="text-muted italic small mb-0">No document associated with this audit entry.
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 p-4 bg-white rounded-4 border">
+                        <h6 class="text-muted smaller fw-800 text-uppercase ls-1 mb-2">Technical Description</h6>
+                        <p class="mb-0 text-secondary">
+                            This record serves as a cryptographic proof of identity association.
+                            The transaction was processed on <strong>@Model.RecordDate</strong> and is permanently
+                            stored in the audit trail.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-700 {
+        font-weight: 700;
+    }
+
+    .ls-1 {
+        letter-spacing: 0.5px;
+    }
+
+    .smaller {
+        font-size: 0.7rem;
+    }
+
+    .round-icon-lg {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        font-size: 1.5rem;
+    }
+
+    .text-indigo {
+        color: #6366f1;
+    }
+
+    .bg-indigo {
+        background-color: #6366f1;
+    }
+
+    .border-indigo {
+        border-color: #6366f1 !important;
+    }
+</style>

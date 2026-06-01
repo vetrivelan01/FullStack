@@ -1,0 +1,276 @@
+@model FullStack.Models.CitizenDetailsViewModel
+@{
+    ViewData["Title"] = "360 Citizen Profile";
+}
+
+<div class="fade-in">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h1 class="h2 fw-800 mb-1"><i class="bi bi-person-vcard text-gradient me-2"></i> Citizen <span
+                    class="text-gradient">Profile</span></h1>
+            <p class="text-muted small mb-0">Comprehensive 360-degree view of citizen credentials and biography.</p>
+        </div>
+        <a asp-action="Index" class="btn btn-light d-flex align-items-center gap-2">
+            <i class="bi bi-arrow-left"></i> <span>Identity Directory</span>
+        </a>
+    </div>
+
+    <div class="row g-4">
+        <!-- Profile Summary Sidebar -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="glass-card sticky-top" style="top: 100px; z-index: 10;">
+                <div class="card-header text-center border-0 bg-transparent py-5">
+                    <div class="mb-4 mx-auto">
+                        <i class="bi bi-person-circle display-1 shadow-glow rounded-circle"
+                            style="color:var(--blue-400);"></i>
+                    </div>
+                    <h3 class="fw-800 mb-1">@Model.Citizen.CitizenName</h3>
+                    <div class="d-flex justify-content-center gap-2 mb-4">
+                        <span class="badge border-0 rounded-pill px-3 py-2 fw-600"
+                            style="background:rgba(59,130,246,0.1);color:var(--blue-400);">
+                            ID: @Model.Citizen.CitizenID
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body px-4 pt-0 pb-4">
+                    <div class="p-3 rounded-4 mb-4"
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);">
+                        <h6 class="text-uppercase smaller fw-800 text-secondary mb-3"><i class="bi bi-info-circle me-1"
+                                style="color:var(--blue-400);"></i> Bio Details</h6>
+                        <div class="row g-2 small">
+                            <div class="col-5 text-muted fw-600">Birth Date</div>
+                            <div class="col-7 fw-500">@Model.Citizen.DateOfBirth.ToString("MMMM dd, yyyy")</div>
+
+                            <div class="col-5 text-muted fw-600">Gender</div>
+                            <div class="col-7 fw-500">@Model.Citizen.Gender</div>
+
+                            <div class="col-5 text-muted fw-600">Nationality</div>
+                            <div class="col-7 fw-500">@Model.Citizen.Nationality</div>
+
+                            <div class="col-5 text-muted fw-600">Language</div>
+                            <div class="col-7 fw-500">@Model.Citizen.Language</div>
+                        </div>
+                    </div>
+
+                    <div class="p-3 rounded-4 mb-4"
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);">
+                        <h6 class="text-uppercase smaller fw-800 text-secondary mb-3"><i class="bi bi-telephone me-1"
+                                style="color:var(--blue-400);"></i> Connectivity</h6>
+                        <p class="mb-0 fw-500 small"><i
+                                class="bi bi-chat-dots me-2 text-muted"></i>@Model.Citizen.PhoneNumber</p>
+                    </div>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@Model.Citizen.CitizenID"
+                            class="btn btn-premium w-100 fw-600 py-2 d-flex align-items-center justify-content-center gap-2 rounded-3 mt-3">
+                            <i class="bi bi-pencil-square"></i> <span>Modify Profile</span>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Tabs Section -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="glass-card h-100 overflow-hidden">
+                <div class="card-header bg-transparent border-bottom-0 p-0">
+                    <ul class="nav nav-pills glass-pills gap-1 p-2" id="profileTabs" role="tablist">
+                        <li class="nav-item flex-fill" role="presentation">
+                            <button class="nav-link active w-100 fw-700 py-3 rounded-3" id="addresses-tab"
+                                data-bs-toggle="tab" data-bs-target="#addresses" type="button" role="tab">
+                                <i class="bi bi-geo-alt me-2"></i> Locations
+                            </button>
+                        </li>
+                        <li class="nav-item flex-fill" role="presentation">
+                            <button class="nav-link w-100 fw-700 py-3 rounded-3" id="documents-tab" data-bs-toggle="tab"
+                                data-bs-target="#documents" type="button" role="tab">
+                                <i class="bi bi-file-earmark-text me-2"></i> Identifiers
+                            </button>
+                        </li>
+                        <li class="nav-item flex-fill" role="presentation">
+                            <button class="nav-link w-100 fw-700 py-3 rounded-3" id="records-tab" data-bs-toggle="tab"
+                                data-bs-target="#records" type="button" role="tab">
+                                <i class="bi bi-folder2-open me-2"></i> Audit Logs
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body p-0">
+                    <div class="tab-content" id="profileTabsContent">
+
+                        <!-- Addresses -->
+                        <div class="tab-pane fade show active p-4" id="addresses" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-800 mb-0">Registered Addresses</h5>
+                                <a asp-controller="Address" asp-action="Create"
+                                    class="btn btn-sm btn-primary px-3 rounded-pill fw-600"><i
+                                        class="bi bi-plus me-1"></i> Add New</a>
+                            </div>
+                            @if (!Model.Addresses.Any())
+                            {
+                                <div class="text-center py-5 rounded-4" style="border:1px dashed rgba(255,255,255,0.08);">
+                                    <i class="bi bi-geo display-4 text-muted opacity-25 mb-3"></i>
+                                    <p class="text-muted small">No residential patterns detected in database.</p>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="d-grid gap-3">
+                                    @foreach (var addr in Model.Addresses)
+                                    {
+                                        <div class="p-3 rounded-4 hover-lift transition-all"
+                                            style="border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div class="d-flex gap-3">
+                                                    <div class="round-icon"
+                                                        style="background:rgba(59,130,246,0.1);color:var(--blue-400);">
+                                                        <i class="bi bi-geo-alt-fill"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-1 fw-700">@addr.HouseNumber, @addr.StreetName</h6>
+                                                        <p class="mb-0 text-muted smaller">@addr.City, @addr.State
+                                                            @addr.PostalCode</p>
+                                                    </div>
+                                                </div>
+                                                <span class="badge text-secondary fw-500 rounded-pill px-3"
+                                                    style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">#@addr.AddressID</span>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Documents -->
+                        <div class="tab-pane fade p-4" id="documents" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-800 mb-0">Legal Identification</h5>
+                                <a asp-controller="Document" asp-action="Create"
+                                    class="btn btn-sm btn-success px-3 rounded-pill fw-600"><i
+                                        class="bi bi-plus me-1"></i> Issue New</a>
+                            </div>
+                            @if (!Model.Documents.Any())
+                            {
+                                <div class="text-center py-5 rounded-4" style="border:1px dashed rgba(255,255,255,0.08);">
+                                    <i class="bi bi-file-earmark-x display-4 text-muted opacity-25 mb-3"></i>
+                                    <p class="text-muted small">Citizen currently holds no active identification.</p>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="d-grid gap-3">
+                                    @foreach (var doc in Model.Documents)
+                                    {
+                                        <div class="p-4 rounded-4 hover-lift transition-all"
+                                            style="border:1px solid rgba(16,185,129,0.12);background:rgba(16,185,129,0.04);">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h5 class="mb-0 fw-800 d-flex align-items-center" style="color:var(--success);">
+                                                    <i class="bi bi-patch-check-fill me-2"></i> @doc.DocumentType
+                                                </h5>
+                                                <span class="badge px-3 py-2 rounded-pill small fw-700"
+                                                    style="background:rgba(16,185,129,0.1);color:var(--success);border:1px solid rgba(16,185,129,0.2);">ID:
+                                                    @doc.DocumentID</span>
+                                            </div>
+                                            <div class="row g-4 align-items-center">
+                                                <div class="col-md-6" style="border-right:1px solid rgba(16,185,129,0.1);">
+                                                    <div class="small text-muted mb-1 text-uppercase fw-800 smaller ls-1">
+                                                        Document Pattern</div>
+                                                    <div class="fw-700">@doc.DocumentNumber</div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="small text-muted mb-1 text-uppercase fw-800 smaller ls-1">
+                                                        Effective Date</div>
+                                                    <div class="fw-700">@doc.IssueDate.ToString("MMMM dd, yyyy")</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Records -->
+                        <div class="tab-pane fade p-4" id="records" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-800 mb-0">Official Compliance History</h5>
+                                <a asp-controller="Record" asp-action="Create"
+                                    class="btn btn-sm btn-info px-3 rounded-pill fw-600 text-white"><i
+                                        class="bi bi-lightning-charge me-1"></i> New Log</a>
+                            </div>
+                            @if (!Model.Records.Any())
+                            {
+                                <div class="text-center py-5 rounded-4" style="border:1px dashed rgba(255,255,255,0.08);">
+                                    <i class="bi bi-clipboard-x display-4 text-muted opacity-25 mb-3"></i>
+                                    <p class="text-muted small">No compliance records have been generated for this entity.
+                                    </p>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="table-container">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="ps-3 fw-800 smaller text-uppercase text-secondary">References
+                                                </th>
+                                                <th class="fw-800 smaller text-uppercase text-secondary text-center">
+                                                    Timestamp</th>
+                                                <th class="pe-3 text-end fw-800 smaller text-uppercase text-secondary">
+                                                    Verification</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var rec in Model.Records)
+                                            {
+                                                <tr>
+                                                    <td class="ps-3 py-3">
+                                                        <div class="d-flex gap-2">
+                                                            <span class="badge rounded-3 px-2 py-1 small fw-600"
+                                                                style="background:rgba(59,130,246,0.06);color:var(--blue-400);border:1px solid rgba(59,130,246,0.12);">A:@rec.AddressID</span>
+                                                            <span class="badge rounded-3 px-2 py-1 small fw-600"
+                                                                style="background:rgba(16,185,129,0.06);color:var(--success);border:1px solid rgba(16,185,129,0.12);">D:@rec.DocumentID</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center py-3">
+                                                        <div class="fw-700 small">@rec.RecordDate.ToString("MMM dd, yyyy")</div>
+                                                        <div class="smaller text-muted">@rec.RecordDate.ToShortTimeString()
+                                                        </div>
+                                                    </td>
+                                                    <td class="pe-3 text-end py-3">
+                                                        @if (rec.RecordStatus == "Pending")
+                                                        {
+                                                            <span class="badge px-3 py-2 rounded-pill fw-800 small"
+                                                                style="background:rgba(245,158,11,0.1);color:var(--warning);border:1px solid rgba(245,158,11,0.2);">
+                                                                <i class="bi bi-hourglass-split me-1"></i> PENDING
+                                                            </span>
+                                                        }
+                                                        else if (rec.RecordStatus == "Approved")
+                                                        {
+                                                            <span class="badge px-3 py-2 rounded-pill fw-800 small"
+                                                                style="background:rgba(16,185,129,0.1);color:var(--success);border:1px solid rgba(16,185,129,0.2);">
+                                                                <i class="bi bi-shield-check me-1"></i> AUDITED
+                                                            </span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="badge px-3 py-2 rounded-pill fw-800 small"
+                                                                style="background:rgba(148,163,184,0.1);color:var(--text-secondary);border:1px solid rgba(148,163,184,0.2);">
+                                                                @rec.RecordStatus.ToUpper()
+                                                            </span>
+                                                        }
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

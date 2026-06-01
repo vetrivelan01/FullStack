@@ -1,0 +1,627 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FullStack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\data\\fullstackdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\data\\fullstackdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\migrations\\fullstackdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\migrations\\fullstackdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\migrations\\20260303121711_addexpirydatetodocuments.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\migrations\\20260303121711_addexpirydatetodocuments.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\migrations\\20260303121711_addexpirydatetodocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\migrations\\20260303121711_addexpirydatetodocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\migrations\\20260303050407_initialcreateclean.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\migrations\\20260303050407_initialcreateclean.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\migrations\\20260303050407_initialcreateclean.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\migrations\\20260303050407_initialcreateclean.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\build_output.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\build_output.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\db_update_error_utf8.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\db_update_error_utf8.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\controllers\\recordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\controllers\\recordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\live_run.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\live_run.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\addressrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\addressrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\controllers\\citizencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\controllers\\citizencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\services\\recordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\services\\recordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\db_update_error_utf8.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\db_update_error_utf8.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\services\\interfaces\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\services\\interfaces\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\services\\interfaces\\irecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\services\\interfaces\\irecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\c#\\queue\\.net webpage\\FullStack\\FullStack\\Migrations\\20260228060854_UpdateLoginFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\c#\\stack\\FullStack\\FullStack\\Models\\DashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\services\\interfaces\\icitizenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\services\\interfaces\\icitizenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\services\\citizenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\services\\citizenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\logindetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\logindetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\citizendetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\citizendetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\citizenrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\citizenrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\views\\citizen\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\views\\citizen\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\models\\identitydocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\models\\identitydocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|d:\\fullstack\\fullstack\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A88012-02F6-18BE-2219-EF5193151676}|FullStack\\FullStack.csproj|solutionrelative:fullstack\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FullStackDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Migrations\\FullStackDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "FullStack\\Migrations\\FullStackDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Migrations\\FullStackDbContextModelSnapshot.cs",
+              "RelativeToolTip": "FullStack\\Migrations\\FullStackDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:11:32.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260303121711_AddExpiryDateToDocuments.Designer.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.Designer.cs",
+              "RelativeDocumentMoniker": "FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.Designer.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.Designer.cs",
+              "RelativeToolTip": "FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:11:32.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FullStackDbContext.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Data\\FullStackDbContext.cs",
+              "RelativeDocumentMoniker": "FullStack\\Data\\FullStackDbContext.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Data\\FullStackDbContext.cs",
+              "RelativeToolTip": "FullStack\\Data\\FullStackDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:53:29.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Program.cs",
+              "RelativeDocumentMoniker": "FullStack\\Program.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Program.cs",
+              "RelativeToolTip": "FullStack\\Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:59:34.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260303121711_AddExpiryDateToDocuments.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.cs",
+              "RelativeDocumentMoniker": "FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.cs",
+              "RelativeToolTip": "FullStack\\Migrations\\20260303121711_AddExpiryDateToDocuments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:11:31.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260303050407_InitialCreateClean.Designer.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Migrations\\20260303050407_InitialCreateClean.Designer.cs",
+              "RelativeDocumentMoniker": "FullStack\\Migrations\\20260303050407_InitialCreateClean.Designer.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Migrations\\20260303050407_InitialCreateClean.Designer.cs",
+              "RelativeToolTip": "FullStack\\Migrations\\20260303050407_InitialCreateClean.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:11:31.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260303050407_InitialCreateClean.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Migrations\\20260303050407_InitialCreateClean.cs",
+              "RelativeDocumentMoniker": "FullStack\\Migrations\\20260303050407_InitialCreateClean.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Migrations\\20260303050407_InitialCreateClean.cs",
+              "RelativeToolTip": "FullStack\\Migrations\\20260303050407_InitialCreateClean.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:11:31.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "build_output.txt",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\build_output.txt",
+              "RelativeDocumentMoniker": "FullStack\\build_output.txt",
+              "ToolTip": "D:\\FullStack\\FullStack\\build_output.txt",
+              "RelativeToolTip": "FullStack\\build_output.txt",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-22T03:48:00.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\appsettings.json",
+              "RelativeDocumentMoniker": "FullStack\\appsettings.json",
+              "ToolTip": "D:\\FullStack\\FullStack\\appsettings.json",
+              "RelativeToolTip": "FullStack\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-28T05:58:08.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "db_update_error_utf8.log",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\db_update_error_utf8.log",
+              "RelativeDocumentMoniker": "FullStack\\db_update_error_utf8.log",
+              "ToolTip": "D:\\FullStack\\FullStack\\db_update_error_utf8.log",
+              "RelativeToolTip": "FullStack\\db_update_error_utf8.log",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-22T03:48:03.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "FullStack\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "FullStack\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T03:18:22.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RecordController.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Controllers\\RecordController.cs",
+              "RelativeDocumentMoniker": "FullStack\\Controllers\\RecordController.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Controllers\\RecordController.cs",
+              "RelativeToolTip": "FullStack\\Controllers\\RecordController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:49:16.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "live_run.txt",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\live_run.txt",
+              "RelativeDocumentMoniker": "FullStack\\live_run.txt",
+              "ToolTip": "D:\\FullStack\\FullStack\\live_run.txt",
+              "RelativeToolTip": "FullStack\\live_run.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-22T03:48:09.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddressRecord.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\AddressRecord.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\AddressRecord.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\AddressRecord.cs",
+              "RelativeToolTip": "FullStack\\Models\\AddressRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:51:35.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Citizen.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\Citizen.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\Citizen.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\Citizen.cs",
+              "RelativeToolTip": "FullStack\\Models\\Citizen.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:51:17.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "FullStack\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T14:01:19.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CitizenController.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Controllers\\CitizenController.cs",
+              "RelativeDocumentMoniker": "FullStack\\Controllers\\CitizenController.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Controllers\\CitizenController.cs",
+              "RelativeToolTip": "FullStack\\Controllers\\CitizenController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA5wIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:48:25.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RecordService.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Services\\RecordService.cs",
+              "RelativeDocumentMoniker": "FullStack\\Services\\RecordService.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Services\\RecordService.cs",
+              "RelativeToolTip": "FullStack\\Services\\RecordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:56:43.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ILoginService.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Services\\Interfaces\\ILoginService.cs",
+              "RelativeDocumentMoniker": "FullStack\\Services\\Interfaces\\ILoginService.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Services\\Interfaces\\ILoginService.cs",
+              "RelativeToolTip": "FullStack\\Services\\Interfaces\\ILoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:55:59.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "db_update_error_utf8.txt",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\db_update_error_utf8.txt",
+              "RelativeDocumentMoniker": "FullStack\\db_update_error_utf8.txt",
+              "ToolTip": "D:\\FullStack\\FullStack\\db_update_error_utf8.txt",
+              "RelativeToolTip": "FullStack\\db_update_error_utf8.txt",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-20T04:19:10.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IRecordService.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Services\\Interfaces\\IRecordService.cs",
+              "RelativeDocumentMoniker": "FullStack\\Services\\Interfaces\\IRecordService.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Services\\Interfaces\\IRecordService.cs",
+              "RelativeToolTip": "FullStack\\Services\\Interfaces\\IRecordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:55:43.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ICitizenService.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Services\\Interfaces\\ICitizenService.cs",
+              "RelativeDocumentMoniker": "FullStack\\Services\\Interfaces\\ICitizenService.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Services\\Interfaces\\ICitizenService.cs",
+              "RelativeToolTip": "FullStack\\Services\\Interfaces\\ICitizenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:54:31.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "FullStack\\Services\\LoginService.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Services\\LoginService.cs",
+              "RelativeToolTip": "FullStack\\Services\\LoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:56:56.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "FullStack\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "FullStack\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:49:33.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CitizenService.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Services\\CitizenService.cs",
+              "RelativeDocumentMoniker": "FullStack\\Services\\CitizenService.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Services\\CitizenService.cs",
+              "RelativeToolTip": "FullStack\\Services\\CitizenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:56:28.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LoginDetails.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\LoginDetails.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\LoginDetails.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\LoginDetails.cs",
+              "RelativeToolTip": "FullStack\\Models\\LoginDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:52:16.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\RegisterViewModel.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "FullStack\\Models\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T05:53:52.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\c#\\stack\\FullStack\\FullStack\\Models\\DashboardViewModel.cs",
+              "ToolTip": "C:\\c#\\stack\\FullStack\\FullStack\\Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T05:53:49.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CitizenDetailsViewModel.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\CitizenDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\CitizenDetailsViewModel.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\CitizenDetailsViewModel.cs",
+              "RelativeToolTip": "FullStack\\Models\\CitizenDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T05:53:46.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CitizenRecord.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\CitizenRecord.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\CitizenRecord.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\CitizenRecord.cs",
+              "RelativeToolTip": "FullStack\\Models\\CitizenRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:52:35.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Views\\Citizen\\Create.cshtml",
+              "RelativeDocumentMoniker": "FullStack\\Views\\Citizen\\Create.cshtml",
+              "ToolTip": "D:\\FullStack\\FullStack\\Views\\Citizen\\Create.cshtml",
+              "RelativeToolTip": "FullStack\\Views\\Citizen\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-28T14:07:33.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IdentityDocument.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Models\\IdentityDocument.cs",
+              "RelativeDocumentMoniker": "FullStack\\Models\\IdentityDocument.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Models\\IdentityDocument.cs",
+              "RelativeToolTip": "FullStack\\Models\\IdentityDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:51:59.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FullStack\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\FullStack\\FullStack\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FullStack\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-02T03:20:51.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AddressController.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Controllers\\AddressController.cs",
+              "RelativeDocumentMoniker": "FullStack\\Controllers\\AddressController.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Controllers\\AddressController.cs",
+              "RelativeToolTip": "FullStack\\Controllers\\AddressController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:48:40.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "FullStack\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\FullStack\\FullStack\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "FullStack\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-28T14:10:31.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "FullStack\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\FullStack\\FullStack\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "FullStack\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-28T14:02:32.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "D:\\FullStack\\FullStack\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "FullStack\\Controllers\\DocumentController.cs",
+              "ToolTip": "D:\\FullStack\\FullStack\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "FullStack\\Controllers\\DocumentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:48:57.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260228060854_UpdateLoginFix.cs",
+              "DocumentMoniker": "C:\\c#\\queue\\.net webpage\\FullStack\\FullStack\\Migrations\\20260228060854_UpdateLoginFix.cs",
+              "ToolTip": "C:\\c#\\queue\\.net webpage\\FullStack\\FullStack\\Migrations\\20260228060854_UpdateLoginFix.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T06:08:54.916Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

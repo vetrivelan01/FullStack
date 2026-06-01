@@ -1,0 +1,95 @@
+﻿@model IEnumerable<FullStack.Models.Citizen>
+@{
+    ViewData["Title"] = "Citizens Directory";
+}
+
+<div class="fade-in">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5 gap-3">
+        <div>
+            <h1 class="h2 fw-800 mb-1"><i class="bi bi-people text-gradient me-2"></i> Citizens <span
+                    class="text-gradient">Directory</span></h1>
+            <p class="text-muted small mb-0">Manage and verify citizen identity records across the system.</p>
+        </div>
+        @if (User.Identity?.IsAuthenticated ?? false && User.IsInRole("Admin"))
+        {
+            <a asp-action="Create" class="btn btn-primary d-flex align-items-center gap-2">
+                <i class="bi bi-person-plus-fill"></i> <span>Register Citizen</span>
+            </a>
+        }
+    </div>
+
+    <!-- Search Bar -->
+    <div class="glass-card mb-5">
+        <div class="card-body p-4">
+            <form asp-action="Index" method="get" class="row g-3">
+                <div class="col-lg-8">
+                    <div class="input-group">
+                        <span class="input-group-text border-end-0"><i class="bi bi-search text-muted"></i></span>
+                        <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]"
+                            class="form-control border-start-0 ps-0 shadow-none"
+                            placeholder="Find by Name, Identity Number, or Nationality..." />
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary flex-grow-1">Search Database</button>
+                    <a asp-action="Index" class="btn btn-light px-3" title="Reset Filters"><i
+                            class="bi bi-arrow-counterclockwise"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5 glass-card">
+            <i class="bi bi-search display-4 text-muted opacity-25 mb-3"></i>
+            <h5 class="text-muted">No search results found</h5>
+            <p class="small text-muted mb-0">Try adjusting your keywords or filters.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-container">
+            <table class="table table-hover align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th class="ps-4">Citizen ID</th>
+                        <th>Full Name</th>
+                        <th>Gender</th>
+                        <th>Nationality</th>
+                        <th class="text-end pe-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <span class="badge border-0 fw-600 px-3 py-2" style="background:rgba(59,130,246,0.1);color:var(--blue-400);">
+                                    @item.CitizenID
+                                </span>
+                            </td>
+                            <td class="fw-600">@item.CitizenName</td>
+                            <td class="text-secondary small">@item.Gender</td>
+                            <td><span class="badge fw-500" style="background:rgba(255,255,255,0.05);color:var(--text-secondary);">@item.Nationality</span></td>
+                            <td class="text-end pe-4">
+                                <div class="btn-group">
+                                    <a asp-action="Details" asp-route-id="@item.CitizenID" class="btn btn-sm btn-white"
+                                        title="View Profile"><i class="bi bi-eye"></i></a>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-action="Edit" asp-route-id="@item.CitizenID" class="btn btn-sm btn-white"
+                                            title="Edit Record"><i class="bi bi-pencil"></i></a>
+                                        <a asp-action="Delete" asp-route-id="@item.CitizenID"
+                                            class="btn btn-sm btn-white" title="Delete Record" style="color:var(--danger);"><i
+                                                class="bi bi-trash"></i></a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

@@ -1,0 +1,216 @@
+@model FullStack.Helpers.PaginatedList<IdentityDocument>
+@{
+    ViewData["Title"] = "Identity Documents";
+}
+
+<div class="fade-in">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5 gap-3">
+        <div>
+            <h1 class="h2 fw-800 mb-1"><i class="bi bi-file-earmark-text text-gradient me-2"></i> Identity <span
+                    class="text-gradient">Documents</span></h1>
+            <p class="text-muted small mb-0">Monitor compliance and validity of official citizen credentials.</p>
+        </div>
+        @if (User.Identity?.IsAuthenticated ?? false && User.IsInRole("Admin"))
+        {
+            <a asp-action="Create" class="btn btn-primary d-flex align-items-center gap-2 shadow-sm">
+                <i class="bi bi-file-plus-fill"></i> <span>Issue New Document</span>
+            </a>
+        }
+    </div>
+
+    <!-- Search & Filter Bar -->
+    <div class="glass-card mb-5">
+        <div class="card-body p-4">
+            <form asp-action="Index" method="get" id="filterForm" class="row g-4 align-items-end">
+                <div class="col-xl-4 col-md-6">
+                    <label class="form-label fw-bold text-secondary small text-uppercase">Search Database</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-0 ps-0"><i class="bi bi-search"></i></span>
+                        <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]"
+                            class="form-control border-0 shadow-none bg-transparent"
+                            placeholder="Document type, ID, or owner name..." />
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                    <label class="form-label fw-bold text-secondary small text-uppercase">Expiry Status</label>
+                    <select name="expiryFilter" id="expiryFilter"
+                        class="form-select border-0 shadow-none bg-transparent fw-600">
+                        <option value="">All Statuses</option>
+                        <option value="7Days" selected="@(ViewData["ExpiryFilter"]?.ToString() == "7Days")">Next 7 Days
+                        </option>
+                        <option value="30Days" selected="@(ViewData["ExpiryFilter"]?.ToString() == "30Days")">Next 30
+                            Days</option>
+                        <option value="Expired" selected="@(ViewData["ExpiryFilter"]?.ToString() == "Expired")">Expired
+                            Only</option>
+                        <option value="Custom" selected="@(ViewData["ExpiryFilter"]?.ToString() == "Custom")">Date
+                            Range...</option>
+                    </select>
+                </div>
+                <div id="customDateRange"
+                    class="col-xl-3 col-md-12 @(ViewData["ExpiryFilter"]?.ToString() == "Custom" ? "" : "d-none")">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <label class="form-label fw-bold text-secondary smaller text-uppercase">From</label>
+                            <input type="date" name="startDate" value="@ViewData["StartDate"]"
+                                class="form-control border-0 bg-light bg-opacity-50" />
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label fw-bold text-secondary smaller text-uppercase">To</label>
+                            <input type="date" name="endDate" value="@ViewData["EndDate"]"
+                                class="form-control border-0 bg-light bg-opacity-50" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-12 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary flex-grow-1">Apply Filters</button>
+                    <button type="button" onclick="exportToCsv()" class="btn btn-success px-3" title="Export to CSV">
+                        <i class="bi bi-file-earmark-spreadsheet"></i>
+                    </button>
+                    <a asp-action="Index" class="btn btn-light px-3" title="Clear Filters"><i
+                            class="bi bi-x-lg"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('expiryFilter').addEventListener('change', function () {
+            var customRange = document.getElementById('customDateRange');
+            if (this.value === 'Custom') {
+                customRange.classList.remove('d-none');
+            } else {
+                customRange.classList.add('d-none');
+            }
+        });
+
+        function exportToCsv() {
+            var form = document.getElementById('filterForm');
+            var params = new URLSearchParams(new FormData(form)).toString();
+            window.location.href = '@Url.Action("ExportCSV")?' + params;
+        }
+    </script>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5 glass-card animate-on-scroll">
+            <i class="bi bi-file-earmark-x display-4 text-muted opacity-25 mb-3"></i>
+            <h5 class="text-muted">No documents found</h5>
+            <p class="small text-muted mb-0">Try different search terms or status filters.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-container animate-on-scroll">
+            <table class="table table-hover align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th class="ps-4">Document Type</th>
+                        <th>Citizen / Owner</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+                        <th class="text-end pe-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        var today = DateTime.Today;
+                        var statusBadge = "bg-success";
+                        var statusText = "Valid";
+
+                        if (item.ExpiryDate < today)
+                        {
+                            statusBadge = "bg-danger";
+                            statusText = "Expired";
+                        }
+                        else if (item.ExpiryDate <= today.AddDays(30))
+                        {
+                            statusBadge = "bg-warning text-dark";
+                            statusText = "Warning";
+                        }
+
+                        <tr>
+                            <td class="ps-4">
+                                <div class="fw-bold text-dark">@item.DocumentType</div>
+                                <small class="text-muted">ID: #@item.DocumentNumber</small>
+                            </td>
+                            <td>
+                                <div class="fw-600">@item.Citizen?.CitizenName</div>
+                                <div class="text-secondary smaller">@item.CitizenID</div>
+                            </td>
+                            <td class="small">@item.ExpiryDate.ToString("MMM dd, yyyy")</td>
+                            <td><span class="badge @statusBadge px-3">@statusText</span></td>
+                            <td class="text-end pe-4">
+                                <div class="btn-group shadow-sm">
+                                    <a asp-action="Details" asp-route-id="@item.DocumentID"
+                                        class="btn btn-sm btn-white border"><i class="bi bi-eye"></i></a>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-action="Edit" asp-route-id="@item.DocumentID" class="btn btn-sm btn-white border"><i
+                                                class="bi bi-pencil"></i></a>
+                                        <a asp-action="Delete" asp-route-id="@item.DocumentID"
+                                            class="btn btn-sm btn-white border text-danger"><i class="bi bi-trash"></i></a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-5 animate-on-scroll">
+            <ul class="pagination justify-content-center gap-2">
+                <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)"
+                        asp-route-searchString="@ViewData["CurrentFilter"]"
+                        asp-route-expiryFilter="@ViewData["ExpiryFilter"]" asp-route-startDate="@ViewData["StartDate"]"
+                        asp-route-endDate="@ViewData["EndDate"]" class="page-link border px-3 rounded-3 shadow-sm">
+                        <i class="bi bi-chevron-left"></i>
+                    </a>
+                </li>
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                        <a asp-action="Index" asp-route-pageNumber="@i" asp-route-searchString="@ViewData["CurrentFilter"]"
+                            asp-route-expiryFilter="@ViewData["ExpiryFilter"]" asp-route-startDate="@ViewData["StartDate"]"
+                            asp-route-endDate="@ViewData["EndDate"]" class="page-link border px-3 rounded-3 shadow-sm">@i</a>
+                    </li>
+                }
+                <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)"
+                        asp-route-searchString="@ViewData["CurrentFilter"]"
+                        asp-route-expiryFilter="@ViewData["ExpiryFilter"]" asp-route-startDate="@ViewData["StartDate"]"
+                        asp-route-endDate="@ViewData["EndDate"]" class="page-link border px-3 rounded-3 shadow-sm">
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-600 {
+        font-weight: 600;
+    }
+
+    .smaller {
+        font-size: 0.75rem;
+    }
+
+    .btn-white {
+        background: white;
+        color: var(--secondary);
+    }
+
+    .btn-white:hover {
+        background: #f8fafc;
+        color: var(--primary);
+    }
+</style>

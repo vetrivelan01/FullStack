@@ -1,0 +1,88 @@
+@model CitizenRecord
+@{
+    ViewData["Title"] = "Create Record";
+}
+
+<div class="fade-in">
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h3 fw-800 mb-1"><i class="bi bi-file-earmark-plus text-gradient me-2"></i> Submit <span class="text-gradient">Audit Record</span></h1>
+                    <p class="text-muted small mb-0">Record an official compliance verification and link existing entity data.</p>
+                </div>
+                <a asp-action="Index" class="btn btn-light shadow-sm btn-sm"><i class="bi bi-x-lg"></i></a>
+            </div>
+
+            <div class="glass-card animate-on-scroll">
+                <div class="card-body p-4 p-md-5">
+                    <form asp-action="Create" class="needs-validation">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4 small"></div>
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <label asp-for="CitizenID" class="form-label fw-700 text-secondary smaller text-uppercase">Accountable Citizen</label>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <select asp-for="CitizenID" class="form-select fw-600 shadow-none border-0 bg-light bg-opacity-50" asp-items="ViewBag.CitizensList" required>
+                                        <option value="">-- Identify Subject --</option>
+                                    </select>
+                                }
+                                else
+                                {
+                                    <input asp-for="CitizenID" class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" readonly />
+                                }
+                                <span asp-validation-for="CitizenID" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="AddressID" class="form-label fw-700 text-secondary smaller text-uppercase">Residential Linkage</label>
+                                <select asp-for="AddressID" class="form-select fw-600 shadow-none border-0 bg-light bg-opacity-50" asp-items="ViewBag.AddressesList" required>
+                                    <option value="">-- Map Address --</option>
+                                </select>
+                                <span asp-validation-for="AddressID" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="DocumentID" class="form-label fw-700 text-secondary smaller text-uppercase">Credential Linkage</label>
+                                <select asp-for="DocumentID" class="form-select fw-600 shadow-none border-0 bg-light bg-opacity-50" asp-items="ViewBag.DocumentsList" required>
+                                    <option value="">-- Map Document --</option>
+                                </select>
+                                <span asp-validation-for="DocumentID" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="RecordStatus" class="form-label fw-700 text-secondary smaller text-uppercase">Initial Compliance Status</label>
+                                <select asp-for="RecordStatus" class="form-select fw-600 shadow-none border-0 bg-light bg-opacity-50" required>
+                                    <option value="Active">Active</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Archived">Archived</option>
+                                </select>
+                                <span asp-validation-for="RecordStatus" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-12 mt-5">
+                                <button type="submit" class="btn btn-primary w-100 py-3 fw-800 shadow-glow rounded-3 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="bi bi-journal-check"></i> <span>Commit Official Record</span>
+                                </button>
+                                <a asp-action="Index" class="btn btn-link w-100 text-muted text-decoration-none small fw-600 mt-2">Abort Submission</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 { font-weight: 800; }
+    .fw-700 { font-weight: 700; }
+    .fw-600 { font-weight: 600; }
+    .smaller { font-size: 0.75rem; }
+    .shadow-glow { box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3); }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

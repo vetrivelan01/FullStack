@@ -1,0 +1,121 @@
+@model AddressRecord
+@{
+    ViewData["Title"] = "Update Location";
+}
+
+<div class="fade-in">
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h3 fw-800 mb-1"><i class="bi bi-pencil-square text-gradient me-2"></i> Update <span
+                            class="text-gradient">Location</span></h1>
+                    <p class="text-muted small mb-0">Modify geospatial metadata for address ID: #@Model.AddressID</p>
+                </div>
+                <a asp-action="Details" asp-route-id="@Model.AddressID" class="btn btn-light shadow-sm btn-sm"><i
+                        class="bi bi-x-lg"></i></a>
+            </div>
+
+            <div class="glass-card animate-on-scroll">
+                <div class="card-body p-4 p-md-5">
+                    <form asp-action="Edit" class="needs-validation">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4 small"></div>
+                        <input type="hidden" asp-for="AddressID" />
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <label asp-for="CitizenID"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Citizen
+                                    Reference</label>
+                                <select asp-for="CitizenID"
+                                    class="form-select fw-600 shadow-none border-0 bg-light bg-opacity-50"
+                                    asp-items="ViewBag.CitizensList" required>
+                                </select>
+                                <span asp-validation-for="CitizenID" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="HouseNumber"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">House/Unit #</label>
+                                <input asp-for="HouseNumber"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" />
+                                <span asp-validation-for="HouseNumber" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-8">
+                                <label asp-for="StreetName"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Street Name</label>
+                                <input asp-for="StreetName"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" required />
+                                <span asp-validation-for="StreetName" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="City"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">City</label>
+                                <input asp-for="City"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" required />
+                                <span asp-validation-for="City" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label asp-for="State"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">State</label>
+                                <input asp-for="State"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" required />
+                                <span asp-validation-for="State" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label asp-for="PostalCode"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">ZIP Code</label>
+                                <input asp-for="PostalCode"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" required />
+                                <span asp-validation-for="PostalCode" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-12 mt-5">
+                                <button type="submit"
+                                    class="btn btn-primary w-100 py-3 fw-800 shadow-glow rounded-3 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="bi bi-save2"></i> <span>Commit Location Changes</span>
+                                </button>
+                                <a asp-action="Details" asp-route-id="@Model.AddressID"
+                                    class="btn btn-link w-100 text-muted text-decoration-none small fw-600 mt-2">Discard
+                                    Changes</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-700 {
+        font-weight: 700;
+    }
+
+    .fw-600 {
+        font-weight: 600;
+    }
+
+    .smaller {
+        font-size: 0.75rem;
+    }
+
+    .shadow-glow {
+        box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+    }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

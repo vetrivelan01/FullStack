@@ -1,0 +1,72 @@
+@model IdentityDocument
+@{
+    ViewData["Title"] = "Void Document";
+}
+
+<div class="fade-in">
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-7">
+            <div class="glass-card border-0 overflow-hidden animate-on-scroll shadow-danger-soft">
+                <div class="bg-danger bg-opacity-10 p-4 border-bottom border-danger border-opacity-25 text-center">
+                    <div class="round-icon bg-danger text-white mx-auto mb-3"
+                        style="width: 56px; height: 56px; border-radius: 12px; font-size: 1.25rem;">
+                        <i class="bi bi-file-earmark-x-fill"></i>
+                    </div>
+                    <h2 class="h5 fw-800 text-danger mb-0">Void Credential</h2>
+                </div>
+
+                <div class="card-body p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <p class="text-muted small">
+                            Are you certain you want to void this @Model.DocumentType?
+                            This action will remove the record from the active identity registry.
+                        </p>
+                    </div>
+
+                    <div class="p-3 bg-light bg-opacity-50 rounded-4 border mb-4">
+                        <div class="text-center">
+                            <h4 class="fw-800 text-dark mb-1">@Model.DocumentNumber</h4>
+                            <p class="text-muted smaller fw-700 text-uppercase mb-0">HOLDER ID: #@Model.CitizenID</p>
+                        </div>
+                    </div>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="DocumentID" />
+                        <div class="d-grid gap-3">
+                            <button type="submit" class="btn btn-danger py-2 fw-800 rounded-3 shadow-sm">
+                                <i class="bi bi-shield-slash me-2"></i> Confirm & Void
+                            </button>
+                            <a asp-action="Index" class="btn btn-light py-2 fw-700 rounded-3 border">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-700 {
+        font-weight: 700;
+    }
+
+    .smaller {
+        font-size: 0.7rem;
+    }
+
+    .shadow-danger-soft {
+        box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.1), 0 10px 10px -5px rgba(220, 38, 38, 0.04);
+    }
+
+    .round-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>

@@ -1,0 +1,139 @@
+﻿@model FullStack.Models.Citizen
+@{
+    ViewData["Title"] = "Register Citizen";
+}
+
+<div class="fade-in">
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h3 fw-800 mb-1"><i class="bi bi-person-plus text-gradient me-2"></i> Register <span
+                            class="text-gradient">Citizen</span></h1>
+                    <p class="text-muted small mb-0">Onboard a new identity into the secure digital system.</p>
+                </div>
+                <a asp-action="Index" class="btn btn-light shadow-sm btn-sm"><i class="bi bi-x-lg"></i></a>
+            </div>
+
+            <div class="glass-card animate-on-scroll">
+                <div class="card-body p-4 p-md-5">
+                    <form asp-action="Create" method="post" class="needs-validation">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4 small"></div>
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <label asp-for="CitizenName"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Full Legal
+                                    Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0"><i
+                                            class="bi bi-person text-muted"></i></span>
+                                    <input asp-for="CitizenName"
+                                        class="form-control border-start-0 ps-0 fw-600 shadow-none"
+                                        placeholder="Enter full name" />
+                                </div>
+                                <span asp-validation-for="CitizenName" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="DateOfBirth"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Date of
+                                    Birth</label>
+                                <input asp-for="DateOfBirth" type="date" class="form-control fw-600 shadow-none" />
+                                <span asp-validation-for="DateOfBirth" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Gender"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Gender
+                                    Identification</label>
+                                <select asp-for="Gender" class="form-select fw-600 shadow-none">
+                                    <option value="">Select gender...</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Prefer not to say">Prefer not to say</option>
+                                </select>
+                                <span asp-validation-for="Gender" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Nationality"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Nationality</label>
+                                <input asp-for="Nationality" class="form-control fw-600 shadow-none"
+                                    placeholder="Citizenship status" />
+                                <span asp-validation-for="Nationality" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Language"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Primary
+                                    Language</label>
+                                <input asp-for="Language" class="form-control fw-600 shadow-none"
+                                    placeholder="e.g. English" />
+                                <span asp-validation-for="Language" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="PhoneNumber"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Contact
+                                    Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0"><i
+                                            class="bi bi-telephone text-muted"></i></span>
+                                    <input asp-for="PhoneNumber"
+                                        class="form-control border-start-0 ps-0 fw-600 shadow-none"
+                                        placeholder="+1 (555) 000-0000" />
+                                </div>
+                                <span asp-validation-for="PhoneNumber" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-12 mt-5">
+                                <button type="submit"
+                                    class="btn btn-primary w-100 py-3 fw-800 shadow-glow rounded-3 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="bi bi-shield-check"></i> <span>Complete Registration</span>
+                                </button>
+                                <p class="text-center mt-3 text-muted smaller mb-0">By clicking register, you verify the
+                                    information is accurate and legal.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-700 {
+        font-weight: 700;
+    }
+
+    .fw-600 {
+        font-weight: 600;
+    }
+
+    .smaller {
+        font-size: 0.75rem;
+    }
+
+    .shadow-glow {
+        box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--primary);
+    }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

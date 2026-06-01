@@ -1,0 +1,100 @@
+@model FullStack.Models.Citizen
+@{
+    ViewData["Title"] = "Decommission Citizen";
+}
+
+<div class="fade-in">
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-7">
+            <div class="glass-card border-0 overflow-hidden animate-on-scroll">
+                <div class="bg-danger bg-opacity-10 p-4 border-bottom border-danger border-opacity-25 text-center">
+                    <div class="round-icon-lg bg-danger text-white mx-auto mb-3 shadow-danger">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                    </div>
+                    <h2 class="h4 fw-800 text-danger mb-1">Danger Zone</h2>
+                    <p class="text-danger small mb-0 opacity-75">Irreversible Identity Decommissioning</p>
+                </div>
+
+                <div class="card-body p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h5 class="fw-800 text-dark">Confirm Deletion</h5>
+                        <p class="text-muted small">
+                            You are about to permanently purge the digital footprint for
+                            <span class="text-dark fw-800">@Model.CitizenName</span>.
+                            All associated documents, addresses, and audit trails will be erased from the secure ledger.
+                        </p>
+                    </div>
+
+                    <div class="p-3 bg-light bg-opacity-50 rounded-4 border mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted smaller fw-800 text-uppercase ls-1">ENTITY ID</span>
+                            <span class="fw-800 small text-dark">#@Model.CitizenID</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted smaller fw-800 text-uppercase ls-1">LEGAL NAME</span>
+                            <span class="fw-800 small text-dark">@Model.CitizenName</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted smaller fw-800 text-uppercase ls-1">STATUS</span>
+                            <span
+                                class="badge bg-danger bg-opacity-10 text-danger px-2 py-1 rounded-pill fw-800 small">PENDING
+                                PURGE</span>
+                        </div>
+                    </div>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="CitizenID" />
+                        <div class="d-grid gap-3">
+                            <button type="submit" class="btn btn-danger py-3 fw-800 shadow-danger rounded-3">
+                                <i class="bi bi-trash3-fill me-2"></i> Confirm & Purge Identity
+                            </button>
+                            <a asp-action="Details" asp-route-id="@Model.CitizenID"
+                                class="btn btn-light py-3 fw-700 rounded-3">
+                                Cancel & Return
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card-footer bg-light bg-opacity-50 border-0 p-4 text-center">
+                    <p class="smaller text-muted mb-0">
+                        <i class="bi bi-info-circle me-1"></i>
+                        This operation adheres to cryptographic compliance standards for secure data destruction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-700 {
+        font-weight: 700;
+    }
+
+    .ls-1 {
+        letter-spacing: 0.5px;
+    }
+
+    .smaller {
+        font-size: 0.7rem;
+    }
+
+    .round-icon-lg {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-size: 1.5rem;
+    }
+
+    .shadow-danger {
+        box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.4);
+    }
+</style>

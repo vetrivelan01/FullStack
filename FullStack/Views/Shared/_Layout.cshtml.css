@@ -1,0 +1,7 @@
+﻿/* Scoped layout CSS - minimal, no conflicts with dark theme */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}

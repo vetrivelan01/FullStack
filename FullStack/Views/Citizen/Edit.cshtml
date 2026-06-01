@@ -1,0 +1,125 @@
+@model FullStack.Models.Citizen
+@{
+    ViewData["Title"] = "Edit Citizen Profile";
+}
+
+<div class="fade-in">
+    <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h3 fw-800 mb-1"><i class="bi bi-pencil-square text-gradient me-2"></i> Edit <span
+                            class="text-gradient">Profile</span></h1>
+                    <p class="text-muted small mb-0">Modify security identity metadata for citizen ID: #@Model.CitizenID
+                    </p>
+                </div>
+                <a asp-action="Details" asp-route-id="@Model.CitizenID" class="btn btn-light shadow-sm btn-sm"><i
+                        class="bi bi-x-lg"></i></a>
+            </div>
+
+            <div class="glass-card animate-on-scroll">
+                <div class="card-body p-4 p-md-5">
+                    <form asp-action="Edit" class="needs-validation">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4 small"></div>
+                        <input type="hidden" asp-for="CitizenID" />
+
+                        <div class="row g-4">
+                            <div class="col-md-8">
+                                <label asp-for="CitizenName"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Full Legal
+                                    Name</label>
+                                <input asp-for="CitizenName"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50"
+                                    placeholder="Enter name" />
+                                <span asp-validation-for="CitizenName" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="DateOfBirth"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">DOB</label>
+                                <input asp-for="DateOfBirth" type="date"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" />
+                                <span asp-validation-for="DateOfBirth" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="Gender"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Gender</label>
+                                <select asp-for="Gender"
+                                    class="form-select fw-600 shadow-none border-0 bg-light bg-opacity-50">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span asp-validation-for="Gender" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="Nationality"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Nationality</label>
+                                <input asp-for="Nationality"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" />
+                                <span asp-validation-for="Nationality" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="Language"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Language</label>
+                                <input asp-for="Language"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" />
+                                <span asp-validation-for="Language" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="PhoneNumber"
+                                    class="form-label fw-700 text-secondary smaller text-uppercase">Contact
+                                    Number</label>
+                                <input asp-for="PhoneNumber"
+                                    class="form-control fw-600 shadow-none border-0 bg-light bg-opacity-50" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger smaller"></span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top">
+                                <a asp-action="Index"
+                                    class="btn btn-link text-muted text-decoration-none small fw-600"><i
+                                        class="bi bi-arrow-left me-1"></i> Return to Directory</a>
+                                <button type="submit" class="btn btn-primary px-5 py-2 fw-800 shadow-glow rounded-3">
+                                    <i class="bi bi-save2 me-2"></i> Commit Changes
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fw-800 {
+        font-weight: 800;
+    }
+
+    .fw-700 {
+        font-weight: 700;
+    }
+
+    .fw-600 {
+        font-weight: 600;
+    }
+
+    .smaller {
+        font-size: 0.75rem;
+    }
+
+    .shadow-glow {
+        box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+    }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
